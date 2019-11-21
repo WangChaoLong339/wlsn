@@ -15,8 +15,8 @@ cc.Class({
                 'Select',
                 'GuanQia1',
                 'GuanQia2',
-                'MsgBox',
                 'Tips',
+                'MsgBox',
             ]
         }
 

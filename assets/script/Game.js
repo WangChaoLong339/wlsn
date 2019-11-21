@@ -7,8 +7,6 @@ cc.Class({
     onLoad: function () {
         // 管理
         window.UiMgr = this.node.PathChild("showRoot", "UiMgr")
-        // 获取当前关卡
-        window.CurrIdx = GetLocalStorage('wlsn_current_guan_qia') || 1
     },
 
     onEnable: function () {

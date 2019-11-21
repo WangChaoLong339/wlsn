@@ -15,6 +15,8 @@ cc.Class({
     },
 
     init: function () {
+        // 获取当前关卡
+        this.currIdx = GetLocalStorage('wlsn_current_guan_qia') || 1
         // 选择关卡
         this.currentGuanQia.getComponent(cc.Label).string = '请选择关卡'
         // 显示有效关卡
@@ -27,7 +29,7 @@ cc.Class({
             let item = cc.instantiate(this.item)
             item.PathChild('val', cc.Label).string = `第${i + 1}关`
             item.width = parseInt((this.viewWidth - (this.clumnCount - 1) * 10) / this.clumnCount)
-            item.color = i < CurrIdx ? cc.Color.WHITE : cc.Color.GRAY
+            item.color = i < this.currIdx ? cc.Color.WHITE : cc.Color.GRAY
             this.content.addChild(item)
         }
     },
@@ -35,7 +37,7 @@ cc.Class({
     btnItem: function (event) {
         let idx = this.content.children.indexOf(event.target)
         // 非法关卡
-        if (idx >= CurrIdx) {
+        if (idx >= this.currIdx) {
             return
         }
         // 打开关卡

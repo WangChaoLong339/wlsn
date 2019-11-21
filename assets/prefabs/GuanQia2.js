@@ -13,7 +13,7 @@ cc.Class({
     },
 
     btnAnswer: function (event) {
-        SetLocalStorage('wlsn_current_guan_qia', ++CurrIdx)
+        SetLocalStorage('wlsn_current_guan_qia', 3)
         UiMgr.show('MsgBox', {
             title: '系统提示',
             str: '喔！你真是太聪明了～进入下一关?',
@@ -21,7 +21,7 @@ cc.Class({
             btn1: function () {
                 UiMgr.hide(this.node.name)
                 UiMgr.show(`MsgBox`, { str: '后续关卡开发中...' })
-                // UiMgr.show(`GuanQia${++CurrIdx}`)
+                // UiMgr.show(`GuanQia3`)
             }.bind(this),
             btn2: function () {
                 UiMgr.hide(this.node.name)

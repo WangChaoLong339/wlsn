@@ -40,14 +40,14 @@ cc.Class({
             r: idx == 1 ? true : false,
             callback: function () {
                 if (idx == 1) {
-                    SetLocalStorage('wlsn_current_guan_qia', ++CurrIdx)
+                    SetLocalStorage('wlsn_current_guan_qia', 2)
                     UiMgr.show('MsgBox', {
                         title: '系统提示',
                         str: '对哦，是形状最大的数字呢～进入下一关?',
                         btn1Name: '确定',
                         btn1: function () {
                             UiMgr.hide(this.node.name)
-                            UiMgr.show(`GuanQia${CurrIdx}`)
+                            UiMgr.show(`GuanQia2`)
                         }.bind(this),
                         btn2: function () {
                             UiMgr.hide(this.node.name)
